@@ -67,11 +67,10 @@ nav a.active {
     color: #c9a12e;
     border-bottom-color: #c9a12e;
 }
-
 /* Hero Section */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('slike/2B2A2880.jpg') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('slike/2B2A2880.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
