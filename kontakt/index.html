@@ -61,22 +61,33 @@
                 </div>
                 
                 <div class="kontakt-forma">
-                    <h3>Pošaljite nam poruku</h3>
-                    
-                    <!-- FORMA KOJA RADI - šalje na filip.corkovic766@gmail.com -->
-                   <form action="https://formsubmit.co/filip.corkovic766@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Ime" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <button type="submit">Pošalji Test</button>
-</form>
+    <h3>Pošaljite nam poruku</h3>
 
+    <form action="https://formsubmit.co/filip.corkovic766@gmail.com" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+        
+        <input type="text" name="Ime" placeholder="Vaše ime" required>
+        <input type="email" name="Email" placeholder="Vaš email" required>
+        <input type="tel" name="Telefon" placeholder="Vaš telefon">
+        <textarea name="Poruka" rows="5" placeholder="Vaša poruka" required></textarea>
+        
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://bistrosteffi.hr/kontakt/">
+        <input type="text" name="_honey" style="display:none">
+        
+        <button type="submit" class="btn-submit" id="submitBtn">Pošalji poruku</button>
+    </form>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.getElementById('successMessage').style.display='block'; document.querySelector('form').style.display='none';}"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.getElementById('successMessage').style.display='block'; document.querySelector('form').style.display='none';}"></iframe>
 
-<div id="successMessage" style="display: none; margin-top: 20px; padding: 15px; background: #1f1f1f; border: 2px solid #c9a12e; border-radius: 5px; color: #c9a12e; text-align: center;">
-    <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
-    <p>Hvala! Vaša poruka je uspješno poslana. Javit ćemo vam se uskoro.</p>
+    <div id="successMessage" style="display: none; margin-top: 20px; padding: 15px; background: #1f1f1f; border: 2px solid #c9a12e; border-radius: 5px; color: #c9a12e; text-align: center;">
+        <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
+        <p>Hvala! Vaša poruka je uspješno poslana. Javit ćemo vam se uskoro.</p>
+    </div>
+
+    <script type="text/javascript">var submitted=false;</script>
 </div>
+
 
 <script type="text/javascript">var submitted=false;</script>
 
