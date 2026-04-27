@@ -618,7 +618,9 @@ footer p {
         display: block;
 
     }
-
+.logo img {
+        max-width: 110px;
+        height: auto;}
 
     nav {
         position: absolute;
