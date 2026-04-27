@@ -29,8 +29,8 @@ header {
 
 .header-container {
     max-width: 1400px;
-    margin: 0;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -523,11 +523,14 @@ footer p {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: row;
+        flex-direction: column;
         gap: 20px;
         padding: 0 20px;
     }
 
+    .logo {
+        display: none;
+    }
 
     nav {
         flex-wrap: wrap;
@@ -603,47 +606,9 @@ footer p {
         background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
     }
 }
-/* HAMBURGER */
-.hamburger {
-    display: none;
-    font-size: 1.8rem;
-    color: #c9a12e;
-    cursor: pointer;
-    margin-left: auto;
 
-}
-/* MOBILE NAV */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-
-    }
-.logo img {
-        max-width: 90px;
-        height: auto;}
-
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #1f1f1f;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-        padding: 15px 0;
-        border-top: 1px solid #333;
-    }
-
-    nav.active {
-        max-height: 300px;
+@media (max-width: 576px) {
+    .galerija-grid {
+        grid-template-columns: 1fr;
     }
 }
