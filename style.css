@@ -220,17 +220,7 @@ nav a.active {
 }
 
 /* Responsive za social ikone */
-@media (max-width: 768px) {
-    .social-section h3 {
-        font-size: 1.5rem;
-    }
-    
-    .social-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-}
+
 
 /* O nama stranica */
 .onama-grid {
@@ -473,27 +463,15 @@ nav a.active {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-style: italic;
 }
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: #c9a12e;
+    cursor: pointer;
+    margin-left: auto;
 
-/* Responsive za galeriju */
-@media (max-width: 992px) {
-    .galerija-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
-
-@media (max-width: 768px) {
-    .galerija-item .overlay {
-        transform: translateY(0);
-        background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
-    }
-}
-
-@media (max-width: 576px) {
-    .galerija-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Footer */
 footer {
     background: #1f1f1f;
@@ -506,6 +484,7 @@ footer {
 footer p {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
 }
+
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -523,13 +502,24 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .galerija-item .overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+    }
     .header-container {
         flex-direction: row;
         gap: 20px;
         padding: 0 20px;
     }
-
-
+    .social-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
     nav {
         flex-wrap: wrap;
         justify-content: center;
@@ -603,28 +593,27 @@ footer p {
         transform: translateY(0);
         background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
     }
-}
-/* HAMBURGER */
-.hamburger {
-    display: none;
-    font-size: 1.8rem;
-    color: #c9a12e;
-    cursor: pointer;
-    margin-left: auto;
-
-}
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kontakt-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .galerija-grid {
+        grid-template-columns:1fr;
+    }
 /* MOBILE NAV */
-@media (max-width: 768px) {
     .hamburger {
         display: block;
 
     }
-
-.logo img {
-        width: 60px;
-        height: auto;
-    margin-left: 0;
-padding-left: 0;}
+    .logo img {
+            width: 60px;
+            height: auto;
+        margin-left: 0;
+    padding-left: 0;}
     nav {
         position: absolute;
         top: 100%;
@@ -650,3 +639,4 @@ padding-left: 0;}
         max-height: 300px;
     }
 }
+
