@@ -102,6 +102,11 @@ Dođite, probajte i uvjerite se sami – u Bistru Steffi ručak je uvijek dobra 
     hamburger.addEventListener("click", () => {
         nav.classList.toggle("active");
     });
+    document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+            nav.classList.remove("active");
+        }
+    });
 });
 </script>
 </body>
