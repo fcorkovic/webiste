@@ -7,16 +7,21 @@
     <meta name="description" content="Galerija restorana Bistro Steffi - interijer, ambijent i jela.">
     <link rel="stylesheet" href="../style.css">
      <link rel="icon" href="../slike/favicon-32x32.png" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
 <header>
     <div class="header-container">
         <div class="logo">
-            <img src="../slike/logo2.png" alt="Bistro Steffi logo">
+            <a href="../">
+                <img src="../slike/logo2.png" alt="Bistro Steffi logo">
+            </a>
         </div>
-        
-        <nav>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="nav-menu">
             <a href="../">Početna</a>
             <a href="../onama/">O nama</a>
             <a href="../galerija/" class="active">Galerija</a>
@@ -123,7 +128,15 @@
         <p>&copy; 2026 Bistro Steffi | Sva prava pridržana</p>
     </div>
 </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav-menu");
 
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+});
+</script>
 </body>
-   
 </html>
