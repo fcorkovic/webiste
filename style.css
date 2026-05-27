@@ -497,7 +497,67 @@ footer {
 footer p {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
 }
+.slajdshow{
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0px auto 30px auto;
+    overflow: hidden;
+    position: relative;
+}
 
+.opis h2{
+    text-align: center;
+    margin: 25px 0;
+    font-size: 2.5rem;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+.kutijaslajd{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slajd{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.slajd.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.slajd img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 1s ease;
+}
+
+.slajd.active img{
+    transform: scale(1);
+}
+
+.poruka{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FDF6EC;
+    padding-bottom: 30px;
+}
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -651,5 +711,14 @@ footer p {
     nav.active {
         max-height: 300px;
     }
+    .slajdshow{
+        height: 300px;
+        width: 100%;
+    }
+
+    .slajdshow h2{
+        font-size: 2rem;
+    }
+
 }
 

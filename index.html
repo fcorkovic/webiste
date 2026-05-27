@@ -70,6 +70,42 @@
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="opis">
+            <h2 class="skriveno2">Galerija <span class="zlatni">slika</span></h2>
+        </div>
+    </section>
+    
+    <section class="slajdshow skriveno">
+        
+        <div class="kutijaslajd">
+            <div class="slajd active">
+                <img src="slike/slike galerija/2B2A3121.jpg" loading="lazy" alt="Unutrašnjost restorana Bistro Steffi">
+
+            </div>
+            <div class="slajd">
+                <img src="slike/slike galerija/2B2A9407.jpg" loading="lazy" alt="Bar Bistro Steffi">
+ 
+            </div>
+            <div class="slajd">
+                <img src="slike/slike galerija/2B2A9431.jpg" loading="lazy" alt="Traka Bistro Steffi">
+                
+            </div>
+            <div class="slajd">
+                <img src="slike/slike galerija/lignje.jpg" loading="lazy" alt="Lignje Bistro Steffi">
+                
+            </div>
+            <div class="slajd">
+                <img src="slike/slike galerija/junetina.jpg" loading="lazy" alt="Junetina Bistro Steffi">
+               
+            </div>
+            <div class="slajd">
+                <img src="slike/slike galerija/varivo.jpg" loading="lazy" alt="Varivo Bistro Steffi">
+                
+            </div>
+        </div>
+    </section>
 <section class="social-section skriveno">
     <div class="container">
         <h3>Pratite nas na društvenim mrežama</h3>
@@ -134,7 +170,20 @@ window.addEventListener("load", prikazi);
 window.addEventListener("resize", prikazi);
 
 
+let slajdovi = document.querySelectorAll(".slajd");
+let i = 0;
 
+function showSlide(){
+    slajdovi.forEach(slide => {
+        slide.classList.remove("active");
+    });
+    slajdovi[i].classList.add("active");
+    i++;
+    if(i >= slajdovi.length){
+        i = 0;
+    }
+}
+setInterval(showSlide, 2000);
 
 </script>
 
