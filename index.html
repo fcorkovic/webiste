@@ -34,28 +34,28 @@
 </header>
 
 <main>
-    <section class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('slike/2B2A2880.jpg') center/cover no-repeat;">
-        <div class="hero-content">
+    <section class="page-hero skriveno" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('slike/2B2A2880.webp') center/cover no-repeat;">
+        <div class="hero-content skriveno2">
             <h1>Bistro <span class="zlatni">Steffi</span></h1>
             <p>Restoran s tjednom ponudom</p>
         </div>
     </section>
 
-    <section class="tjedna-ponuda-section">
+    <section class="tjedna-ponuda-section skriveno">
         <div class="container">
             <h2 class="section-naslov">Tjedna <span class="zlatni">ponuda</span></h2>
             
-            <div class="ponuda-slika-container">
+            <div class="ponuda-slika-container skriveno">
                 <img src="slike/jelovnik25.5.JPG" alt="Jelovnik tjedne ponude Bistro Steffi" class="ponuda-slika">
             </div>
         </div>
     </section>
-<section class="section">
-        <div class="container">
+<section class="section skirveno">
+        <div class="container skriveno2">
             <h2>Gablec bez čekanja – preuzmi i uživaj</h2>
             
-            <div class="onama-grid">
-                <div class="onama-text">
+            <div class="onama-grid skriveno">
+                <div class="onama-text skriveno2">
                     
                     <p>Znamo da vrijeme često diktira tempo dana, zato smo u 
                         Bistro Steffi omogućili jednostavan i brz pick up gableca. Bez dugog čekanja i gužvi – 
@@ -64,16 +64,16 @@
                         žele dobar gablec, odmah i bez komplikacija.
                     </p>
                 </div>
-                <div class="onama-slika">
-                    <img src="slike/hranazavan.jpg" alt="hrana za van">
+                <div class="onama-slika skriveno">
+                    <img src="slike/hranazavan.webp" alt="hrana za van">
                 </div>
             </div>
         </div>
     </section>
-<section class="social-section">
+<section class="social-section skriveno">
     <div class="container">
         <h3>Pratite nas na društvenim mrežama</h3>
-        <div class="social-icons">
+        <div class="social-icons skriveno2">
             <a href="https://www.facebook.com/p/Bistro-Steffi-100063464525856/?locale=hr_HR" target="_blank" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
             </a>
@@ -106,6 +106,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+const a = document.querySelectorAll(".skriveno, .skriveno2");
+
+function prikazi() {
+
+    let windowHeight = window.innerHeight;
+
+    a.forEach(el => {
+
+        let top = el.getBoundingClientRect().top;
+
+        if (top < windowHeight - 150) {
+            el.classList.add("pokazi");
+        } else {
+            el.classList.remove("pokazi");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", prikazi);
+window.addEventListener("load", prikazi);
+window.addEventListener("resize", prikazi);
+
+
+
+
 </script>
 
 </body>

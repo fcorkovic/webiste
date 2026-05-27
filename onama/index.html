@@ -32,21 +32,21 @@
 </header>
 
 <main>
-    <section class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../slike/2B2A2880.jpg') center/cover no-repeat;">
-        <div class="hero-content">
+    <section class="page-hero skriveno" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../slike/2B2A2880.webp') center/cover no-repeat;">
+        <div class="hero-content skriveno2">
             <h1>O <span class="zlatni">nama</span></h1>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <h2>Naša <span class="zlatni">priča</span></h2>
-            <p class="lead">Bistro Steffi je ugodan i pristupačan restoran s tjednom ponudom svježih gableca i ručkova, gdje se svatko može osjećati kao kod kuće.</p>
+    <section class="section skriveno">
+        <div class="container skriveno2">
+            <h2 class="skriveno2">Naša <span class="zlatni">priča</span></h2>
+            <p class="lead skriveno">Bistro Steffi je ugodan i pristupačan restoran s tjednom ponudom svježih gableca i ručkova, gdje se svatko može osjećati kao kod kuće.</p>
             
-            <div class="onama-grid">
-                <div class="onama-text">
-                    <h3>Dobrodošli u naš restoran</h3>
-                    <p>Dobrodošli u Bistro Steffi – mjesto gdje dobra hrana, povoljne cijene i ugodna atmosfera idu ruku pod ruku. Nismo fancy restoran, ali smo srčani i trudimo se da svaki obrok bude pravo zadovoljstvo.
+            <div class="onama-grid skriveno" >
+                <div class="onama-text skriveno2">
+                    <h3 class="skriveno">Dobrodošli u naš restoran</h3>
+                    <p class="skriveno2">Dobrodošli u Bistro Steffi – mjesto gdje dobra hrana, povoljne cijene i ugodna atmosfera idu ruku pod ruku. Nismo fancy restoran, ali smo srčani i trudimo se da svaki obrok bude pravo zadovoljstvo.
 
 Svaki tjedan pripremamo svježu ponudu gableca i ručkova, tako da uvijek ima nešto novoga za probati. Naš cilj je da svatko tko svrati kod nas izađe sit i zadovoljan, bez da previše dira po novčaniku.
 
@@ -54,33 +54,33 @@ Bistro je lijepo uređen, ugodan za sjesti s prijateljima ili kolegama, i uvijek
 
 Dođite, probajte i uvjerite se sami – u Bistru Steffi ručak je uvijek dobra ideja!</p>
                 </div>
-                <div class="onama-slika">
-                    <img src="../slike/slika restorana.jpg" alt="Unutrašnjost restorana Bistro Steffi">
+                <div class="onama-slika skriveno">
+                    <img src="../slike/slika restorana.webp" alt="Unutrašnjost restorana Bistro Steffi">
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section sivi-bg">
-        <div class="container">
+        <div class="container skriveno">
             <h2>Zašto <span class="zlatni">odabrati nas</span></h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card skriveno">
                     <div class="feature-icon">🍽️</div>
                     <h3>Pristupačno</h3>
                     <p>Naši gableci i ručkovi su povoljni, tako da svi mogu uživati u domaćoj hrani bez da previše troše.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🥗</div>
+                <div class="feature-card skriveno2">
+                    <div class="feature-icon ">🥗</div>
                     <h3>Svježe</h3>
                     <p>Svaki tjedan pripremamo novu ponudu jela, tako da uvijek ima svježih i zanimljivih opcija za probati.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card skriveno">
                     <div class="feature-icon">👨‍🍳</div>
                     <h3>Udobno</h3>
                     <p>Bistro je lijepo uređen i ugodan za sjesti s prijateljima ili kolegama, bez pretencioznog dojma.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card skriveno2">
                     <div class="feature-icon">😊</div>
                     <h3>Prijateljsko</h3>
                     <p>Osoblje vas dočekuje s osmijehom i trudi se da se svi osjećaju kao kod kuće.</p>
@@ -109,6 +109,34 @@ Dođite, probajte i uvjerite se sami – u Bistru Steffi ručak je uvijek dobra 
         }
     });
 });
+
+
+
+
+const a = document.querySelectorAll(".skriveno, .skriveno2");
+
+function prikazi() {
+
+    let windowHeight = window.innerHeight;
+
+    a.forEach(el => {
+
+        let top = el.getBoundingClientRect().top;
+
+        if (top < windowHeight - 150) {
+            el.classList.add("pokazi");
+        } else {
+            el.classList.remove("pokazi");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", prikazi);
+window.addEventListener("load", prikazi);
+window.addEventListener("resize", prikazi);
+
 </script>
 </body>
 </html>
