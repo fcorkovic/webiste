@@ -719,6 +719,8 @@ footer p {
     .slajdshow h2{
         font-size: 2rem;
     }
-
+.slike {
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
+}
 }
 
